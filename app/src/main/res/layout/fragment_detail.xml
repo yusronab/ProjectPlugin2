@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragment.DetailFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/gradient">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/custom_layout"
+            android:layout_margin="10dp">
+
+            <LinearLayout
+                android:id="@+id/headLiner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <ImageView
+                    android:id="@+id/iconBack"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/ic_back"
+                    android:layout_marginTop="30dp"/>
+
+                <TextView
+                    android:id="@+id/tvHeading"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Details Item"
+                    android:textSize="25sp"
+                    android:textColor="@color/teal_700"
+                    android:fontFamily="serif-monospace"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginStart="10dp"/>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@color/teal_700"
+                app:layout_constraintTop_toBottomOf="@id/headLiner" />
+
+            <TextView
+                android:id="@+id/tvItemName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Item Name"
+                android:layout_marginTop="30dp"
+                android:layout_marginStart="40dp"
+                android:textColor="@color/black"
+                app:layout_constraintTop_toBottomOf="@id/relativeLayout"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <TextView
+                android:id="@+id/tvItemCode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Item Code"
+                android:layout_marginStart="40dp"
+                android:textColor="@color/black"
+                app:layout_constraintTop_toBottomOf="@id/tvItemName"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnFragmentDelData"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:text="Delete"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textAllCaps="false"
+                android:backgroundTint="@color/black"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="50dp"
+                app:cornerRadius="10dp"
+                app:layout_constraintTop_toBottomOf="@id/tvItemCode"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>
